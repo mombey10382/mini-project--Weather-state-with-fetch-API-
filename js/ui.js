@@ -17,9 +17,9 @@ class UI{
         this.location.textContent = location;
         this.main.textContent = this.mainWeather(weather.weather[0].main);
         this.icon.setAttribute('src' , `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
-        this.temp.textContent = Math.ceil(weather.main.temp - 273.15);
-        this.temp_min.textContent = Math.ceil(weather.main.temp_min - 273.15);
-        this.temp_max.textContent = Math.ceil(weather.main.temp_max - 273.15);
+        this.temp.textContent = Math.floor(weather.main.temp - 273.15);
+        this.temp_min.textContent = Math.floor(weather.main.temp_min - 273.15);
+        this.temp_max.textContent = Math.floor(weather.main.temp_max - 273.15);
         this.pressure.textContent = weather.main.pressure;
         this.humidity.textContent = weather.main.humidity;
         this.wind_speed.textContent = weather.wind.speed;
